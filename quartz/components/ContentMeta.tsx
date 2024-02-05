@@ -8,10 +8,15 @@ interface ContentMetaOptions {
    * Whether to display reading time
    */
   showReadingTime: boolean
+
+    /**
+   * Whether to display ContentMeta on root `index.md`
+   */
+    hideOnRoot: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
-  showReadingTime: true,
+  showReadingTime: true, hideOnRoot: true
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -20,6 +25,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
+
+    // hide contentmeta on root if enabled
+    if (options.hideOnRoot && fileData.slug === "index") {
+      return <></>
+    }
 
     if (text) {
       const segments: string[] = []
