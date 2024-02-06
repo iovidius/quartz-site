@@ -1,11 +1,10 @@
 ---
-title: "Smart Traffic Light: IoT Network"
+title: IoT Network
 draft: false
 description: Smart Traffic Light
 date: 2021-01-21
 tags:
   - iot
-  - smart-traffic-light
 ---
 ![[traffic-light-1.png]]
 In this series of blogposts we will create a smart traffic light. This first post is about creating a simple IoT network to be able to hook up the traffic light to. Then we'll create a simple proof of concept. Finally we'll build a full-size version of our traffic light.
