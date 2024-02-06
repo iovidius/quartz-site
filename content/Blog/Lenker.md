@@ -1,12 +1,12 @@
 ---
 title: Lenker
 draft: false
-description: 
-date: 2021-03-16
+description: Maakt het internet malser.
+date: 2020-12-31
 tags:
   - gesodemieter
 ---
-<img src="../img/lenker.png">
+![[lenker.png]]
 
 In de kerstvakantie had ik wat tijd om wijselijk te spenderen, dus ik besloot om een extensie voor Chrome te maken. Geïnspireerd op het gamekanaal van [Lekker Spelen](http://speedrunners.nl/) en de alom bekende filmpjes van [MasterMovies](http://www.mastermovies.nl/), presenteer ik u: **Lenker**™.
 
