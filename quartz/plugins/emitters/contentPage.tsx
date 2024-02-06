@@ -49,6 +49,10 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           allFiles,
         }
 
+        // index is displayed as a homepage
+        if (slug === "index")
+          opts.beforeBody = []
+
         const content = renderPage(cfg, slug, componentData, opts, externalResources)
         const fp = await write({
           ctx,
