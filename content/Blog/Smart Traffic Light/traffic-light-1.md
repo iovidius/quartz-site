@@ -7,9 +7,9 @@ tags:
   - iot
 ---
 ![[traffic-light-1.png]]
-In this series of blogposts we will create a smart traffic light. This first post is about creating a simple IoT network to be able to hook up the traffic light to. Then we'll create a simple proof of concept. Finally we'll build a full-size version of our traffic light.
+In this series of blogposts we will create a smart traffic light. This first post is about creating a simple IoT network to be able to hook up the traffic light to. Then we'll create a simple [proof of concept](traffic-light-2). Finally we'll build a [full-size version](traffic-light-3) of our traffic light.
 
-## Background
+# Background
 
 Currently, I'm a member of the _Webcie_ of student rowing club [A.U.S.R. Orca](http://orcaroeien.nl). This committee is responsible for building and maintaining all of Orca's websites, especially the _Member Portal_ [^1] we built from scratch. A cool feature of the portal is the ability for admins to broadcast whether it is allowed to row: the so-called _vaarverbod_ (we'll use its rather mediocre translation 'rowing ban'). Reasons for a ban could be frost, strong wind or an official event like a general members meeting. This feature is useful for rowers who are now able to check whether they're allowed to row _prior_ to heading to the club. They can have a look at the website or the dedicated Orca-app, which share the same backend.
 
@@ -29,11 +29,11 @@ The type of bans can be displayed using a traffic light:
 
 The idea is simple: let the ban automatically be displayed by a traffic light! A full-size traffic light would definitely be an eyecatcher. How are we about to do such a thing?
 
-## IoT Network
+# IoT Network
 
 We need to have an infrastructure that makes it possible for devices to communicate. In my case it facilitates communication between the backend of the website (member portal) and the traffic light. The protocol we'll be using is [MQTT](https://en.wikipedia.org/wiki/MQTT), or Message Queuing Telemetry Transport. It's really fit to do the job, since it's a lightweight protocol that is publish-subscription based; you won't have to poll every few minutes to see if there's an update. It's widely used for this kind of application, just like [Zigbee](https://en.wikipedia.org/wiki/Zigbee) / [Z-wave](https://en.wikipedia.org/wiki/Z-Wave). We won't use the latter protocols because those require an additional bridge. MQTT just runs over TC/IP which is more practical for our use case.
 
-### MQTT
+## MQTT
 
 MQTT basically boils down to a single server (_broker_) that handles all the communication between a number of devices (_clients_) that are connected to the broker. Diagram 1 is a simple overview of all the entities in the network.
 
@@ -50,11 +50,11 @@ Note that **Traffic Light** and **Backend** are both clients that are connec
 
 Another important feature of the MQTT protocol is the option to _retain_ a message. If a message is retained, it is saved by the broker until it is overwritten. If a new client subscribes to a topic the saved messages would be delivered immediately, which is ideal for rowing bans. Otherwise the device would only be able to detect the rowing ban the moment it changes.
 
-### Broker
+## Broker
 
 The very first thing we need is an MQTT broker. There are excellent free solutions available. I've always used [CloudMQTT](https://www.cloudmqtt.com/) for experimenting, but they recently shut down their free plans (cheapest plan is now $5 per month). [MyQttHub](https://myqtthub.com/en/), [HiveMQ](https://www.hivemq.com/public-mqtt-broker/) and [Flespi](https://flespi.com/mqtt-broker) look promising, although I've never used any of them. For this project I set up my own [Mosquitto](https://mosquitto.org/) broker, which is fairly easy to do but requires some configuration and of course your own server.
 
-### Access Control List (ACL)
+## Access Control List (ACL)
 
 The traffic light is supposed to react to the current rowing ban, so we'll need a topic for that: `vvb/status`. It's also nice to know whether the device is up and running, so we'll throw in another topic for that: `connection/stoplicht`.
 
@@ -77,13 +77,13 @@ topic read vvb/status
 topic write connection/#
 ```
 
-### Publishing the rowing ban
+## Publishing the rowing ban
 
 Our member portal's backend is built with ASP.NET Core. With the [MQTTnet](https://github.com/chkr1011/MQTTnet) library it was fairly easy to connect to the broker and publish the new ban every time it changed.
 
 Remember, you could take anything as input for your traffic light! For example, the current rowing ban of your own sports club, [kanikeenkortebroekaan.nl](https://www.kanikeenkortebroekaan.nl/), or just hook it up to your own smart home network. You'll just need a client that publishes it to your broker. [Node-RED](https://nodered.org/) is for example very suited to automatically generate messages, using its dedicated [MQTT nodes](https://cookbook.nodered.org/mqtt/connect-to-broker).
 
-## Conclusion
+# Conclusion
 
 Now we have the required infrastructure to build our own interactive traffic light! To summarize:
 
