@@ -103,7 +103,7 @@ export function renderPage(
               {
                 type: "element",
                 tagName: "a",
-                properties: { href: inner.properties?.href, class: ["internal"] },
+                properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
                 children: [
                   { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
                 ],
@@ -140,7 +140,7 @@ export function renderPage(
             {
               type: "element",
               tagName: "a",
-              properties: { href: inner.properties?.href, class: ["internal"] },
+              properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
               children: [
                 { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
               ],
@@ -170,7 +170,7 @@ export function renderPage(
             {
               type: "element",
               tagName: "a",
-              properties: { href: inner.properties?.href, class: ["internal"] },
+              properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
               children: [
                 { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
               ],
@@ -209,8 +209,9 @@ export function renderPage(
     </div>
   )
 
+  const lang = componentData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
-    <html>
+    <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
