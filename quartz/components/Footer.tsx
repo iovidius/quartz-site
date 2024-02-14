@@ -15,7 +15,7 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <hr />
         <p>
-          Copyright © Jos Zuijderwijk {year}
+          Copyright © Jos Zuijderwijk 2020–{year}. Created with <a href="https://obsidian.md/">Obsidian</a> and <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>.
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
