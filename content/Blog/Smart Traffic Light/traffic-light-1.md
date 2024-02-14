@@ -1,7 +1,7 @@
 ---
 title: IoT Network
 draft: false
-description: Smart Traffic Light
+description: Learn how to setup an IoT network for a smart traffic light.
 date: 2021-01-21
 tags:
   - iot
@@ -19,24 +19,30 @@ The type of bans can be displayed using a traffic light:
 - Orange indicates a partial rowing ban, e.g. only 1x's are allowed to row;
 - Red indicates a full rowing ban: nobody's allowed to row.
 
+
 <figure>
-    <img src="../imgs/vvb.png"
-         alt="No rowing ban">
-    <figcaption>Fig 1. The website displaying 'No rowing ban'. The pencil icon is visible because I'm logged in as admin.</figcaption>
+  <img
+  src="../../imgs/vvb.png"
+  alt="No rowing ban.">
+  <figcaption><center><small>Fig 1. The website displaying 'No rowing ban'. The pencil icon is visible because I'm logged in as admin.</center></small></figcaption>
 </figure>
 
 The idea is simple: let the ban automatically be displayed by a traffic light! A full-size traffic light would definitely be an eyecatcher. How are we about to do such a thing?
 
 ## IoT Network
 
-We need to have an infrastructure that makes it possible for devices to communicate. In my case it facilitates communication between the backend of the website (member portal) and the traffic light. The protocol we'll be using is [MQTT](https://en.wikipedia.org/wiki/MQTT), or Message Queuing Telemetry Transport. It's really fit to do the job, since it's a lightweight protocol that is publish-subscription based; you won't have to poll every _x_ minutes to see if there's an update. It's widely used for this kind of application, just like [Zigbee](https://en.wikipedia.org/wiki/Zigbee) / [Z-wave](https://en.wikipedia.org/wiki/Z-Wave). We won't use the latter protocols because those require an additional bridge. MQTT just runs over TC/IP which is more practical for our use case.
+We need to have an infrastructure that makes it possible for devices to communicate. In my case it facilitates communication between the backend of the website (member portal) and the traffic light. The protocol we'll be using is [MQTT](https://en.wikipedia.org/wiki/MQTT), or Message Queuing Telemetry Transport. It's really fit to do the job, since it's a lightweight protocol that is publish-subscription based; you won't have to poll every few minutes to see if there's an update. It's widely used for this kind of application, just like [Zigbee](https://en.wikipedia.org/wiki/Zigbee) / [Z-wave](https://en.wikipedia.org/wiki/Z-Wave). We won't use the latter protocols because those require an additional bridge. MQTT just runs over TC/IP which is more practical for our use case.
 
 ### MQTT
 
 MQTT basically boils down to a single server (_broker_) that handles all the communication between a number of devices (_clients_) that are connected to the broker. Diagram 1 is a simple overview of all the entities in the network.
 
-![[imgs/diagram-1.png]]
-Diagram 1. Schematic overview.
+<figure>
+  <img
+  src="../../imgs/diagram-1.png"
+  alt="Diagram.">
+  <figcaption><center><small>Fig 2. Schematic overview of the network.</small></center></figcaption>
+</figure>
 
 **Backend**, **Database** and **Frontend** are all components of the previously mentioned member portal. The user (admin) activates a certain rowing ban by pushing a button on the frontend. This triggers an action on the backend, adding the new ban to the database. The frontend now displays the new ban that is stored in the database. These components are specific to the Orca use case and could be replaced by any other system.
 
