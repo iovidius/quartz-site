@@ -202,6 +202,7 @@ ticker.attach(startupInterval, startupAnimation);
 
 The `startupInterval` is in this case a float with value 0.5, and `startupAnimation` refers to the function that is called.
 
+> 💡**Source:**  The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
 # Result
 
 The traffic light responds perfectly to the MQTT messages that are sent in the `vvb/status` topic. You can easily test that using software like [MQTT.fx](https://mqttfx.jensd.de/). In Figure 5 you will see the animation for "there is no internet connection, an access point has been made" and "trying to connect".

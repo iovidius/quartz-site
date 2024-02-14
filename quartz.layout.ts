@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
       GitHub: "https://github.com/iovidius",
       LinkedIn: "https://www.linkedin.com/in/joszuijderwijk",
       Twitter: "https://twitter.com/joszuijderwijk",
-      RSS: "index.xml"
+      RSS: "https://joszuijderwijk.nl/index.xml"
     },
   }),
 }
