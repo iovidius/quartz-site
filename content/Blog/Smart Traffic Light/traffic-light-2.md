@@ -69,6 +69,7 @@ Now it's time to write some code! The traffic light should:
 6. ?????
 7. Profit
 
+> 💡**Source:**  The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
 ## Control the lights
 
 How to control the lights programmatically? Well, since it's a common cathode circuit, we'll have to turn the pins to 0V for our LEDs to turn on. You first have to declare the pins and then set them to OUTPUT to be able to control them. The setup method will be called _once_ upon start.
@@ -201,7 +202,6 @@ ticker.attach(startupInterval, startupAnimation);
 
 The `startupInterval` is in this case a float with value 0.5, and `startupAnimation` refers to the function that is called.
 
-> 💡**Source:**  The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
 # Result
 
 The traffic light responds perfectly to the MQTT messages that are sent in the `vvb/status` topic. You can easily test that using software like [MQTT.fx](https://mqttfx.jensd.de/). In Figure 5 you will see the animation for "there is no internet connection, an access point has been made" and "trying to connect".
