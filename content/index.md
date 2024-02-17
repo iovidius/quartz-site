@@ -3,7 +3,7 @@ title: Homepage
 draft: false
 description: Jos Zuijderwijks personal website.
 ---
-Hi! 👋
+## Hi! 👋
 
 Welcome to my personal website! Currently I'm pursuing a PhD at the Department of Information and Computing Sciences of [Utrecht University](https://www.uu.nl/medewerkers/AJHzuijderwijk/) My research is centered around the use of process science to further an [open government](https://www.open-overheid.nl/) and is funded by the Dutch [Ministry of Water Management and Infrastructure](https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat).
 

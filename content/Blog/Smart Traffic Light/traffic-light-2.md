@@ -1,5 +1,5 @@
 ---
-title: Prototype
+title: (2) Prototype
 draft: false
 description: Learn how to create a miniature version of an internet-enabled traffic light using the ESP-01s.
 date: 2021-03-16
@@ -73,7 +73,7 @@ Now it's time to write some code! The traffic light should:
 
 How to control the lights programmatically? Well, since it's a common cathode circuit, we'll have to turn the pins to 0V for our LEDs to turn on. You first have to declare the pins and then set them to OUTPUT to be able to control them. The setup method will be called _once_ upon start.
 
-```cpp
+```c
 // According to our wiring diagram
 const int PIN_RED = 3;
 const int PIN_ORANGE = 0;
@@ -88,7 +88,7 @@ void setup {
 
 Now turning an LED on or off goes like this:
 
-```cpp
+```c
 digitalWrite(PIN_RED, LOW);    // Turn ON
 digitalWrite(PIN_RED, HIGH);   // Turn OFF
 ```
@@ -108,7 +108,7 @@ WiFiManager sets up an access point with a captive portal (see Figure 4) where y
 
 The library also makes it easy to add custom HTML. I added a custom footer that contains my contact information.
 
-```cpp
+```c
   WiFiManager wifiManager;
   WiFiManagerParameter custom_text("<p>(c) 2019 by <a href=\"maito:hoi@joszuijderwijk.nl\">Jos Zuijderwijk</a></p>");
   wifiManager.addParameter(&custom_text);
@@ -119,7 +119,7 @@ The library also makes it easy to add custom HTML. I added a custom footer that 
 For the MQTT connection I used the [PubSubClient library](https://github.com/knolleary/pubsubclient). You just provide your MQTT details (host, user, password, port) and this library will do the rest. This piece of code connects to the MQTT server, and it takes a so-called _will message_. This message will be sent to the broker if the device suddenly disconnects. The will message I provided is a **retained** "0" in topic `connection/mini-stoplicht`. After first connecting the client will publish a retained "1" in the same topic. This way we can easily see if the device is connected or not. I also let the client subscribe to the `vvb/status` topic. That's where commands will be sent in.
 
 
-```cpp
+```c
 WiFiClient wifiClient;               // WiFi
 PubSubClient client(wifiClient);     // MQTT
     
@@ -132,7 +132,7 @@ if (client.connect(mqtt_client_name, mqtt_username, mqtt_password, "connection/m
 
 The MQTT callback function, i.e. the function that is called whenever a message is published to a topic that the client has subscribed to, looks like this.
 
-```cpp
+```c
 void callback(char* topic, byte* payload, unsigned int len) {
     
     String msg = ""; // payload
@@ -162,7 +162,7 @@ One way to solve this is adding animations. If the traffic light is connecting t
 
 I implemented the animations like this:
 
-```cpp
+```c
 int animationCycle = 0;
 
 // connecting to wifi animation
@@ -196,7 +196,7 @@ void apAnimation(){
 
 The ticker can be used the following way:
 
-```cpp
+```c
 ticker.attach(startupInterval, startupAnimation);
 ```
 
