@@ -8,7 +8,7 @@ tags:
   - iot
 ---
 ![[traffic-light-3.png]]
-We have set up an [IoT Framework](traffic-light-1) and created a [prototype traffic light](traffic-light-2). Now it's time to build a full-size traffic light that displays the current rowing ban issued by our rowing club (for background, read the [first blogpost](traffic-light-1)).
+We have set up an [IoT Framework](traffic-light-1.md) and created a [prototype traffic light](traffic-light-2.md). Now it's time to build a full-size traffic light that displays the current rowing ban issued by our rowing club (for background, read the [first blogpost](traffic-light-1.md)).
 
 Additional to the features of the prototype, this version will be able to display various animations, such as a party mode. The traffic light should be easily operated through a web app. Another feature we'll add is a button, so the traffic light can also be controlled manually.
 

@@ -5,8 +5,7 @@ description: Jos Zuijderwijks personal website.
 ---
 ## Hi! 👋
 
-Welcome to my personal website! Currently I'm pursuing a PhD at the Department of Information and Computing Sciences of [Utrecht University](https://www.uu.nl/medewerkers/AJHzuijderwijk/) My research is centered around the use of process science to further an [open government](https://www.open-overheid.nl/) and is funded by the Dutch [Ministry of Water Management and Infrastructure](https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat).
-
+Welcome to my personal website! Currently [I'm pursuing a PhD](https://www.uu.nl/medewerkers/AJHzuijderwijk) at the Department of Information and Computing Sciences of Utrecht University. My research is centered around the use of process science to further an [open government](https://www.open-overheid.nl/) and is funded by the Dutch [Ministry of Water Management and Infrastructure](https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat).
 
 There are many things that have my interest! I particularly like #electronics, building software, playing music (mainly the piano), graphic design, self-hosting stuff and watching bad movies. Primarily, this site was made to store (and share) my thoughts on topics that are interesting to me.
 

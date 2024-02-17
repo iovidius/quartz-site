@@ -8,7 +8,7 @@ tags:
   - iot
 ---
 ![[traffic-light-2.png]]
-In my [previous blogpost](traffic-light-1)  we set up an IoT network to hook our smart traffic light up to. In this post we will create our first prototype! We are going to create a miniature version of our internet enabled traffic light. These are the parts I used:
+In my [previous blogpost](traffic-light-1.md)  we set up an IoT network to hook our smart traffic light up to. In this post we will create our first prototype! We are going to create a miniature version of our internet enabled traffic light. These are the parts I used:
 
 - 1x [Miniature Traffic Light](https://nl.aliexpress.com/item/32956703187.html)
 - 1x [ESP-01s](https://nl.aliexpress.com/item/32948119527.html)
@@ -209,15 +209,10 @@ The traffic light responds perfectly to the MQTT messages that are sent in the 
 An improvement could be switching to an encrypted MQTT connection, which isn't all that hard, although not really necessary for this project.
 
 <figure>
-  <img
-  src="../../imgs/animation1.gif"  width="250px">
-  <figcaption><small>Fig 5. "WiFi Not Found" Animation.</small></figcaption>
+	<img src="animation1.gif" alt="WiFi not found 1" width="33%" style="margin:20px!important">
+	<img src="animation2.gif" alt="Connecting" width="33%" style="margin:20px!important">
+	<figcaption><center><small>Fig. 5. "WiFi Not Found" and "Connecting" animations.</center></small></figcaption>
 </figure>
 
-<figure>
-  <img
-  src="../../imgs/animation1.gif" width="250px">
-  <figcaption><small>Fig 6. "Connecting" Animation.</small></figcaption>
-</figure>
 
 [^1]: The ESP-01 consumes 200mA at maximum power (e.g. while connecting to the internet) according to the datasheet, and a typical LED consumes around 20mA.

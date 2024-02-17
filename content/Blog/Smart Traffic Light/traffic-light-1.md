@@ -7,7 +7,7 @@ tags:
   - iot
 ---
 ![[traffic-light-1.png]]
-In this series of blogposts we will create a smart traffic light. This first post is about creating a simple IoT network to be able to hook up the traffic light to. Then we'll create a simple [proof of concept](traffic-light-2). Finally we'll build a [full-size version](traffic-light-3) of our traffic light.
+In this series of blogposts we will create a smart traffic light. This first post is about creating a simple IoT network to be able to hook up the traffic light to. Then we'll create a simple [proof of concept](traffic-light-2.md). Finally we'll build a [full-size version](traffic-light-3.md) of our traffic light.
 
 # Background
 
