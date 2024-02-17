@@ -72,7 +72,7 @@ Now it's time to write some code! The traffic light should:
 > 💡**Source:**  The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
 ## Control the lights
 
-How to control the lights programmatically? Well, since it's a common cathode circuit, we'll have to turn the pins to 0V for our LEDs to turn on. You first have to declare the pins and then set them to OUTPUT to be able to control them. The setup method will be called _once_ upon start.
+How to control the lights programmatically? Well, since it's a common cathode circuit, we'll have to turn the pins to 0V for our LEDs to turn on. You first have to declare the pins and then set them to `OUTPUT` to be able to control them. The setup method will be called _once_ upon start.
 
 ```c
 // According to our wiring diagram
