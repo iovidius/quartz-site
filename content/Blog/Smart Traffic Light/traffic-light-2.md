@@ -127,14 +127,13 @@ if (client.connect(mqtt_client_name, mqtt_username, mqtt_password, "connection/m
       // Send Hello World!
       client.publish("connection/mini-stoplicht", "1", 1);
       client.subscribe("vvb/status"); 
-    }
+}
 ```
 
 The MQTT callback function, i.e. the function that is called whenever a message is published to a topic that the client has subscribed to, looks like this.
 
 ```c
 void callback(char* topic, byte* payload, unsigned int len) {
-    
     String msg = ""; // payload
     for (int i = 0; i < len; i++) {
       msg += ((char)payload[i]);
