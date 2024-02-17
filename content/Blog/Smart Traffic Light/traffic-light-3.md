@@ -16,7 +16,7 @@ Additional to the features of the prototype, this version will be able to displa
 
 We need the following parts:
 
-- 1x Traffic light (I bought mine on [Marktplaats](https://www.marktplaats.nl/) for €110)
+- 1x Traffic light
 - 1x [NodeMCU V3](https://nl.aliexpress.com/item/4000055280006.html?spm=a2g0o.productlist.0.0.5fb27b5eqfQS0w&algo_pvid=eeaf6df4-1304-4ea3-93f4-7bd7a1bd0821&algo_expid=eeaf6df4-1304-4ea3-93f4-7bd7a1bd0821-4&btsid=2100bb4716069226083718443e9783&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) (or something similar)
 - 3x [Relay module](https://nl.aliexpress.com/item/4000956019162.html?spm=a2g0o.productlist.0.0.2027ed13Gypgji&algo_pvid=965a5a84-71f7-494c-bc74-b3beef7ead3e&algo_expid=965a5a84-71f7-494c-bc74-b3beef7ead3e-3&btsid=2100bb4716069228422712620e9783&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)
 - 1x [HLK-](https://nl.aliexpress.com/item/32913206596.html?spm=a2g0o.productlist.0.0.3be857fbaqNHsK&algo_pvid=998e3861-2cac-462b-9c8c-1fa4d5f14af7&algo_expid=998e3861-2cac-462b-9c8c-1fa4d5f14af7-9&btsid=2100bb4716069229904474704e9783&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)[P](https://nl.aliexpress.com/item/32913206596.html?spm=a2g0o.productlist.0.0.3be857fbaqNHsK&algo_pvid=998e3861-2cac-462b-9c8c-1fa4d5f14af7&algo_expid=998e3861-2cac-462b-9c8c-1fa4d5f14af7-9&btsid=2100bb4716069229904474704e9783&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)[M01 AC-DC Power supply](https://nl.aliexpress.com/item/32913206596.html?spm=a2g0o.productlist.0.0.3be857fbaqNHsK&algo_pvid=998e3861-2cac-462b-9c8c-1fa4d5f14af7&algo_expid=998e3861-2cac-462b-9c8c-1fa4d5f14af7-9&btsid=2100bb4716069229904474704e9783&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)
@@ -25,7 +25,7 @@ We need the following parts:
 - 1x Junction box
 - 1x Installation wire
 
-I bought a full size traffic light via [Marktplaats](https://www.marktplaats.nl/) (similar to Ebay). After a few days it arrived. I replaced the light bulbs with LEDs and voilà! It was alive!
+I bought a full size traffic light via [Marktplaats](https://www.marktplaats.nl/) (similar to Ebay) for €110. After a few days it arrived. I replaced the light bulbs with LEDs and voilà! It was alive!
 
 
 <figure >
