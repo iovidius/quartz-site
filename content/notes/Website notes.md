@@ -16,4 +16,4 @@ date: 2024-02-17
 	- general notes, usually small
 
 ## todo
-- [ ] add flashy boxes (plugin?)
+- [x] add flashy boxes (plugin?)
