@@ -2,7 +2,7 @@
 title: "Smart Traffic Light 1: Prototype"
 draft: false
 description: Learn how to create a miniature version of an internet-enabled traffic light using the ESP-01s.
-date: 2021-03-16
+date: 2021-01-27
 tags:
   - electronics
   - iot
