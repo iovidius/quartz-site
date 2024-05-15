@@ -1,5 +1,5 @@
 ---
-title: (2) Prototype
+title: "Smart Traffic Light 1: Prototype"
 draft: false
 description: Learn how to create a miniature version of an internet-enabled traffic light using the ESP-01s.
 date: 2021-03-16
@@ -69,7 +69,7 @@ Now it's time to write some code! The traffic light should:
 6. ?????
 7. Profit
 
-> 💡**Source:**  The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
+> [!information] The source code for this project is publicly accesible via [Github](https://github.com/iovidius/smart-traffic-light/blob/main/mini_stoplicht.ino).
 ## Control the lights
 
 How to control the lights programmatically? Well, since it's a common cathode circuit, we'll have to turn the pins to 0V for our LEDs to turn on. You first have to declare the pins and then set them to `OUTPUT` to be able to control them. The setup method will be called _once_ upon start.

@@ -1,5 +1,5 @@
 ---
-title: (1) IoT Network
+title: "Smart Traffic Light 1: Network"
 draft: false
 description: Learn how to setup an IoT network for a smart traffic light.
 date: 2021-01-21

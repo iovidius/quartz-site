@@ -1,5 +1,5 @@
 ---
-title: (3) Full version
+title: "Smart Traffic Light 3: Final Version"
 draft: false
 description: Learn how to build a full-fledged internet-enabled traffic light.
 date: 2021-03-16
