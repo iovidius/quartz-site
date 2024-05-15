@@ -1,5 +1,5 @@
 ---
-title: "Smart Traffic Light 1: Prototype"
+title: "Smart Traffic Light 2: Prototype"
 draft: false
 description: Learn how to create a miniature version of an internet-enabled traffic light using the ESP-01s.
 date: 2021-01-27
